@@ -21,14 +21,21 @@ import store from './store'
 
 import Home from './screens/Home'
 import Stats from './screens/Stats'
+import Settings from './screens/Settings'
+import colors from './styles/colors'
 
 //Navigation screen color configuration
-const navigationTheme = {
+const navigationDarkTheme = {
 	...DefaultTheme,
 	colors: {
 		...DefaultTheme.colors,
+		background: colors.backgroundDark,
+		card: colors.backgroundDark,
 	},
 }
+
+//TODO: add switch dark and light mode
+const navigationTheme = navigationDarkTheme
 
 const Stack = createStackNavigator()
 
@@ -60,6 +67,7 @@ export default function App() {
 					>
 						<Stack.Screen name="Home" component={Home} />
 						<Stack.Screen name="Stats" component={Stats} />
+						<Stack.Screen name="Settings" component={Settings} />
 					</Stack.Navigator>
 				</NavigationContainer>
 				<StatusBar style="auto" />
