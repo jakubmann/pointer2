@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import { SafeAreaView, ScrollView, StyleSheet, View } from 'react-native'
 import { useSelector } from 'react-redux'
 
@@ -15,7 +15,7 @@ const Home = ({ navigation }) => {
 	return (
 		<SafeAreaView style={styles.container}>
 			<ActivityModal
-				modalOpen={activityModalOpen}	
+				modalOpen={activityModalOpen}
 				closeModal={() => setActivityModalOpen(false)}
 			/>
 			<ScrollView>
