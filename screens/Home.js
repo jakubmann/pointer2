@@ -30,7 +30,9 @@ const Home = ({ navigation }) => {
 							/>
 						)
 					})}
-					<CreateActivity />
+					<CreateActivity
+						openModal={() => setActivityModalOpen(true)}
+					/>
 				</View>
 			</ScrollView>
 			<View style={styles.toolbar}>

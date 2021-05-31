@@ -1,10 +1,29 @@
 import { createSlice } from '@reduxjs/toolkit'
+const initialState = {
+	activityModal: {
+		name: '',
+		points: '',
+		type: 'add',
+	},
+}
 
 export const inputSlice = createSlice({
-	name: 'history',
-	initialState: {},
-	reducers: {},
+	name: 'input',
+	initialState,
+	reducers: {
+		setActivityModalInput: (state, action) => {
+			state.activityModal = {
+				...state.activityModal,
+				...action.payload,
+			}
+			console.log(action.payload)
+		},
+		clearActivityModalInput: (state) => {
+			state.activityModal = initialState.activityModal
+		},
+	},
 })
 
-//export const { ... } = inputSlice.actions
+export const { setActivityModalInput, clearActivityModalInput } =
+	inputSlice.actions
 export default inputSlice.reducer

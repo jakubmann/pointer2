@@ -14,7 +14,7 @@ const StatusBar = () => {
 
 const styles = StyleSheet.create({
 	progress: {
-		backgroundColor: colors.green,
+		backgroundColor: colors.secondary,
 		flex: 1,
 		width: '40%',
 		borderRadius: 15,
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
 	outline: {
 		borderWidth: 1,
 		borderRadius: 15,
-		borderColor: colors.black,
+		borderColor: colors.primary,
 		height: 30,
 	},
 	container: {

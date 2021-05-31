@@ -3,7 +3,10 @@ import { Provider as ReduxProvider } from 'react-redux'
 import AppLoading from 'expo-app-loading'
 import { StatusBar } from 'expo-status-bar'
 import { DefaultTheme, NavigationContainer } from '@react-navigation/native'
-import { createStackNavigator } from '@react-navigation/stack'
+import {
+	CardStyleInterpolators,
+	createStackNavigator,
+} from '@react-navigation/stack'
 import { useFonts } from 'expo-font'
 import {
 	RobotoMono_100Thin,
@@ -62,7 +65,11 @@ export default function App() {
 			<ReduxProvider store={store}>
 				<NavigationContainer style={navigationTheme}>
 					<Stack.Navigator
-						screenOptions={{ headerShown: false }}
+						screenOptions={{
+							headerShown: false,
+							cardStyleInterpolator:
+								CardStyleInterpolators.forVerticalIOS,
+						}}
 						initialRouteName="Home"
 					>
 						<Stack.Screen name="Home" component={Home} />

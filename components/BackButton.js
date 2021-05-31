@@ -1,11 +1,16 @@
 import React from 'react'
 import { View, StyleSheet, TouchableOpacity } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
+import colors from '../styles/colors'
 
 const BackButton = ({ onPress }) => {
 	return (
 		<TouchableOpacity onPress={onPress} style={styles.container}>
-			<Ionicons name="md-chevron-back-outline" size={30} color="black" />
+			<Ionicons
+				name="md-chevron-back-outline"
+				size={30}
+				color={colors.primary}
+			/>
 		</TouchableOpacity>
 	)
 }

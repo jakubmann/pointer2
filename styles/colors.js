@@ -1,12 +1,11 @@
 const colors = {
+	black: '#2f3542',
 	red: '#ff7979',
 	green: '#badc58',
-	backgroundDark: '#13191f',
-	backgroundLight: '#f5f5f5',
-	textLight: '#000000',
-	textDark: '#ffffff',
-	primary: '#22a6b3',
-	secondary: '#7ed6df',
+	background: '#f5f5f5',
+	text: '#000000',
+	primary: '#3742fa',
+	secondary: '#7bed9f',
 }
 
 export default colors

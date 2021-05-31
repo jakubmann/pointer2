@@ -5,13 +5,7 @@ import { v4 as uuidv4 } from 'uuid'
 export const activitySlice = createSlice({
 	name: 'activity',
 	initialState: {
-		activities: [
-			{ id: uuidv4(), name: 'ahoj', points: 100, type: 'add' },
-			{ id: uuidv4(), name: 'aslkdfj', points: 100, type: 'add' },
-			{ id: uuidv4(), name: 'aahoj', points: 100, type: 'remove' },
-			{ id: uuidv4(), name: 'niga', points: 100, type: 'add' },
-			{ id: uuidv4(), name: 'aahoj', points: 200, type: 'remove' },
-		],
+		activities: [],
 	},
 	reducers: {
 		addActivity: (state, action) => {

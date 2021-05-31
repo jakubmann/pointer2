@@ -5,6 +5,7 @@ import { View, Text } from 'react-native'
 
 import { bold, light } from '../styles/typography'
 import colors from '../styles/colors'
+import { centered } from '../styles/common'
 
 const styles = StyleSheet.create({
 	activityContainer: {
@@ -14,13 +15,11 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 	},
 	activity: {
+		...centered,
 		width: 100,
 		height: 100,
 		margin: 10,
-		textAlign: 'center',
 		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center',
 		borderRadius: 10,
 	},
 	add: {

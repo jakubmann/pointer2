@@ -1,4 +1,5 @@
 import { Appearance } from 'react-native'
+import colors from './colors'
 
 const colorScheme = Appearance.getColorScheme()
 
@@ -17,10 +18,13 @@ export const light = {
 
 export const text = {
 	...regular,
+	color: colors.black,
 	fontSize: 15,
 }
 
 export const heading = {
 	...bold,
+	color: colors.black,
 	fontSize: 30,
+	padding: 10,
 }

@@ -20,15 +20,20 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		borderRadius: 10,
 		borderWidth: 1,
-		borderColor: colors.black,
+		borderColor: colors.secondary,
 	},
 })
 
-const CreateActivity = () => {
+const CreateActivity = ({ openModal }) => {
 	return (
 		<View style={styles.activityContainer}>
 			<View style={styles.activity}>
-				<Ionicons name="md-add-outline" size={60} color="black" />
+				<Ionicons
+					name="md-add-outline"
+					size={60}
+					color={colors.primary}
+					onPress={openModal}
+				/>
 			</View>
 		</View>
 	)
