@@ -13,22 +13,22 @@ const StatusBar = () => {
 }
 
 const styles = StyleSheet.create({
-	progress: {
-		backgroundColor: colors.secondary,
-		flex: 1,
-		width: '40%',
-		borderRadius: 15,
-	},
-	outline: {
-		borderWidth: 1,
-		borderRadius: 15,
-		borderColor: colors.primary,
-		height: 30,
-	},
 	container: {
 		flexBasis: '60%',
-		margin: 10,
 		justifyContent: 'center',
+		margin: 10,
+	},
+	outline: {
+		borderColor: colors.primary,
+		borderRadius: 15,
+		borderWidth: 1,
+		height: 30,
+	},
+	progress: {
+		backgroundColor: colors.secondary,
+		borderRadius: 15,
+		flex: 1,
+		width: '40%',
 	},
 })
 export default StatusBar

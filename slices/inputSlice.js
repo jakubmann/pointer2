@@ -12,6 +12,7 @@ export const inputSlice = createSlice({
 	initialState,
 	reducers: {
 		setActivityModalInput: (state, action) => {
+			//Modify only value specified in action 
 			state.activityModal = {
 				...state.activityModal,
 				...action.payload,

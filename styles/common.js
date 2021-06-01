@@ -27,6 +27,7 @@ export const inputLabel = {
 
 export const inputError = {
 	borderColor: colors.red,
+	color: colors.red,
 }
 
 export const modal = {

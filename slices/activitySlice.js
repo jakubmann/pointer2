@@ -11,11 +11,12 @@ export const activitySlice = createSlice({
 		addActivity: (state, action) => {
 			let { name, points, type } = action.payload
 			const activity = {
-				id: uuidv4,
+				id: uuidv4(),
 				name,
 				points,
 				type,
 			}
+
 			state.activities.push(activity)
 		},
 	},

@@ -3,27 +3,6 @@ import { StyleSheet, View, Text } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import colors from '../styles/colors'
 
-const styles = StyleSheet.create({
-	activityContainer: {
-		width: '33%',
-		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center',
-	},
-	activity: {
-		width: 100,
-		height: 100,
-		margin: 10,
-		textAlign: 'center',
-		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center',
-		borderRadius: 10,
-		borderWidth: 1,
-		borderColor: colors.secondary,
-	},
-})
-
 const CreateActivity = ({ openModal }) => {
 	return (
 		<View style={styles.activityContainer}>
@@ -38,5 +17,26 @@ const CreateActivity = ({ openModal }) => {
 		</View>
 	)
 }
+
+const styles = StyleSheet.create({
+	activity: {
+		alignItems: 'center',
+		borderColor: colors.secondary,
+		borderRadius: 10,
+		borderWidth: 1,
+		display: 'flex',
+		height: 100,
+		justifyContent: 'center',
+		margin: 10,
+		textAlign: 'center',
+		width: 100,
+	},
+	activityContainer: {
+		alignItems: 'center',
+		display: 'flex',
+		justifyContent: 'center',
+		width: '33%',
+	},
+})
 
 export default CreateActivity

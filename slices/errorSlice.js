@@ -2,20 +2,21 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
 	activityModal: {
-		titleLength: false,
-		pointsLength: false,
+		nameError: false,
+		pointsError: false,
 	},
-	message: '',
+	messages: [],
 }
 
 export const errorSlice = createSlice({
 	name: 'error',
 	initialState,
 	reducers: {
-		setErrorMessage: (state, action) => {
-			state.message = action.payload
+		addErrorMessage: (state, action) => {
+			state.messages.push(action.payload)
 		},
 		setActivityModalError: (state, action) => {
+			//Modify only value specified in action
 			state.activityModal = {
 				...state.activityModal,
 				...action.payload,
@@ -24,11 +25,15 @@ export const errorSlice = createSlice({
 		clearActivityModalError: (state) => {
 			state.activityModal = initialState.activityModal
 		},
+		clearErrorMessage: (state) => {
+			state.messages = initialState.messages
+		},
 	},
 })
 
 export const {
-	setErrorMessage,
+	addErrorMessage,
+	clearErrorMessage,
 	setActivityModalError,
 	clearActivityModalError,
 } = errorSlice.actions

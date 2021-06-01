@@ -17,8 +17,8 @@ const BackButton = ({ onPress }) => {
 
 const styles = StyleSheet.create({
 	container: {
-		marginTop: 40,
 		marginLeft: 20,
+		marginTop: 40,
 		position: 'absolute',
 		zIndex: 1,
 	},

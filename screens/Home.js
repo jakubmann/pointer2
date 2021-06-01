@@ -24,6 +24,7 @@ const Home = ({ navigation }) => {
 						return (
 							<Activity
 								key={a.id}
+								id={a.id}
 								name={a.name}
 								points={a.points}
 								type={a.type}
@@ -53,28 +54,28 @@ const Home = ({ navigation }) => {
 }
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-	},
 	activities: {
 		display: 'flex',
 		flexDirection: 'row',
 		flexWrap: 'wrap',
 	},
-	toolbar: {
-		flex: 0.2,
-		display: 'flex',
-		flexDirection: 'row',
-		justifyContent: 'space-between',
+	container: {
+		flex: 1,
 	},
-	status: {
+	settings: {
 		flex: 1,
 	},
 	stats: {
 		flex: 1,
 	},
-	settings: {
+	status: {
 		flex: 1,
+	},
+	toolbar: {
+		display: 'flex',
+		flex: 0.2,
+		flexDirection: 'row',
+		justifyContent: 'space-between',
 	},
 })
 
